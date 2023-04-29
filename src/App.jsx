@@ -8,6 +8,7 @@ import SignUp from './pages/SignUp';
 import RequiereLogin from './verifiers/RequiereLogin';
 import RequiereAuth from './verifiers/RequireAuth';
 
+
 export default function App() {
   return (
     <div className='flex flex-col h-screen items-center'>

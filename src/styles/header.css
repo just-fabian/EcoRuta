@@ -1,0 +1,8 @@
+.header-buttons button {
+    margin-left: 15px;
+}
+
+.bottom-nav{
+    position: fixed;
+    bottom: 0;
+}
