@@ -1,11 +1,18 @@
 import BottomNav from '../partials/BottomNav';
 import Header from '../partials/Header';
+import { useState } from 'react';
+import Map from '../partials/MapView';
 
 export default function Home() {
+
+  const [isLogged, setIsLogged] = useState(true);
+
   return (
     <div className='w-full'>
       <Header />
-      <div>CONTENT</div>
+      {
+        isLogged ? <Map/> : <div>LANDING PAGE</div>
+      }
       <BottomNav/>
     </div>
   );

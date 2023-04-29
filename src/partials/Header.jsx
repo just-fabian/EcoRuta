@@ -8,7 +8,7 @@ import '../styles/header.css';
 const Header = () => {
   const [top, setTop] = useState(true);
   const navigate = useNavigate();
-  const size = useWindowSize();
+  const size = useWindowSize()
 
   const signup = () => {
     navigate('/register');
@@ -27,7 +27,7 @@ const Header = () => {
   }, [top]);
 
   return (
-    <AppBar position="static">
+    <AppBar position="fixed">
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', backgroundColor: '#3D656A'}}>
         <Typography variant="h6" sx={{ color: '#FFF7F1'}}>
           EcoRuta
