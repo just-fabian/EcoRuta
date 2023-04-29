@@ -13,9 +13,22 @@ const BottomNav = () => {
     navigate('/register');
   };
 
-  const login = () => {
-    navigate('/login');
+  const profile = () => {
+    navigate('/profile');
   };
+
+  const services = () => {
+    navigate('/services');
+  };
+
+  const home = () => {
+    navigate('/');
+  };
+
+  const trucks = () => {
+    navigate('/trucks');
+  };
+
 
   return (
     <>
@@ -23,10 +36,10 @@ const BottomNav = () => {
         size.width <= 720 && (
           <AppBar className='bottom-nav' position="flex">
             <BottomNavigation>
-              <BottomNavigationAction label="Mapa" icon={<BiMap />} style={{color: "#3D656A"}} />
-              <BottomNavigationAction label="Servicios" icon={<MdOutlineDashboard />} style={{color: "#3D656A"}} />
-              <BottomNavigationAction label="Carros Basureros" icon={<FiTruck />} style={{color: "#3D656A"}} />
-              <BottomNavigationAction onClick={login} label="LogIn" icon={<MdOutlineLogin />} style={{color: "#3D656A"}} />
+              <BottomNavigationAction onClick={home} label="Mapa" icon={<BiMap />} style={{color: "#3D656A"}} />
+              <BottomNavigationAction onClick={services} label="Servicios" icon={<MdOutlineDashboard />} style={{color: "#3D656A"}} />
+              <BottomNavigationAction onClick={trucks} label="Carros Basureros" icon={<FiTruck />} style={{color: "#3D656A"}} />
+              <BottomNavigationAction onClick={profile} label="Profile" icon={<MdOutlineLogin />} style={{color: "#3D656A"}} />
             </BottomNavigation>
           </AppBar>
         )

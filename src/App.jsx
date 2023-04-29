@@ -1,13 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
-import AddApp from './pages/AddApp';
-import Dashboard from './pages/Dashboard';
 import Home from './pages/Home';
-import Login from './pages/Login';
+import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
-import SignUp from './pages/SignUp';
 import RequiereLogin from './verifiers/RequiereLogin';
 import RequiereAuth from './verifiers/RequireAuth';
-
+import Services from './pages/Services';
+import Trucks from './pages/Truck';
 
 export default function App() {
   return (
@@ -15,12 +13,11 @@ export default function App() {
       <Routes>
         <Route element={<RequiereLogin />}>
           <Route path='/' element={<Home />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<SignUp />} />
+          <Route path='/services' element={<Services />} />
+          <Route path='/trucks' element={<Trucks />} />
+          <Route path='/profile' element={<Profile />} />
         </Route>
         <Route element={<RequiereAuth />}>
-          <Route path='/new/app' element={<AddApp />} />
-          <Route path='/dashboard' element={<Dashboard />} />
         </Route>
         <Route path='*' element={<NotFound />} />
       </Routes>

@@ -14,9 +14,22 @@ const Header = () => {
     navigate('/register');
   };
 
-  const login = () => {
-    navigate('/login');
+  const profile = () => {
+    navigate('/profile');
   };
+
+  const services = () => {
+    navigate('/services');
+  };
+
+  const home = () => {
+    navigate('/');
+  };
+
+  const trucks = () => {
+    navigate('/trucks');
+  };
+
   // detect whether user has scrolled the page down by 10px
   useEffect(() => {
     const scrollHandler = () => {
@@ -37,10 +50,10 @@ const Header = () => {
           size.width > 720 && (
             <Box sx={{ display: 'flex', alignItems: 'center'}} >
               <div className='header-buttons' >
-                <Button style={{color: "#FFF7F1"}}>Mapa</Button>
-                <Button style={{color: "#FFF7F1"}}>Servicios</Button>
-                <Button style={{color: "#FFF7F1"}}>Carros Basureros</Button>
-                <Button style={{color: "#FFF7F1"}} onClick={login}>LogIn</Button>
+                <Button style={{color: "#FFF7F1"}} onClick={home}>Mapa</Button>
+                <Button style={{color: "#FFF7F1"}} onClick={services}>Servicios</Button>
+                <Button style={{color: "#FFF7F1"}} onClick={trucks}>Carros Basureros</Button>
+                <Button style={{color: "#FFF7F1"}} onClick={profile}>Profile</Button>
               </div>
             </Box>
           )
