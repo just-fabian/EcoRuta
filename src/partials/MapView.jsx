@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Map, { GeolocateControl, Marker, NavigationControl } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css'
-import '../styles/map.css';
 
 const MapV = () => {
   const [lng, setLng] = useState(-66.156376);
