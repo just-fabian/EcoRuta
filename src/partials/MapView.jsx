@@ -11,6 +11,24 @@ const MapV = () => {
     {lng: -66.156376, lat: -17.394211}, {lng: -66.1505896987, lat: -17.3756628821}, {lng: -66.15602339288954, lat: -17.388139257954773}
   ]);
 
+  // Truck simulation
+  const [truckLocationSimulation, setTruckLocationSimulation] = useState({lng: -66.188740, lat: -17.37092});
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+        if(truckLocationSimulation.lng >= -66.137217){
+            setTruckLocationSimulation({lng: -66.188740, lat: -17.37092})
+        }
+      setTruckLocationSimulation(prevLocation => ({
+        lng: prevLocation.lng + 0.00002,
+        lat: prevLocation.lat - 0.0000014
+      }));
+    }, 90);
+  
+    return () => clearInterval(intervalId);
+  }, [truckLocationSimulation]);
+  // Finish truck simulation
+
   const handlePermission = () => {
     navigator.permissions.query({ name: "geolocation" }).then((result) => {
         console.log(result.state)
@@ -61,6 +79,15 @@ const MapV = () => {
             mapboxAccessToken='pk.eyJ1IjoiZmFiaWFuMTMwNCIsImEiOiJjbGgxY2V0MDIwZ2c1M21td3p3ZnhscjBnIn0.OLeCRjH-HMImvve7licNNw'
         >
         <NavigationControl showCompass={false} position='bottom-right' style={{ marginBottom: 24 }} />
+        <Marker longitude={lng} latitude={lat} anchor="bottom" scale={0.5} pitchAlignment={'viewport'}>
+            <img src={'https://uploads-ssl.webflow.com/62c5e0898dea0b799c5f2210/62e8212acc540f291431bad2_location-icon.png'} alt="marker" width={40} />
+        </Marker>
+
+            {/** truck simulation */}
+        <Marker longitude={truckLocationSimulation.lng} latitude={truckLocationSimulation.lat} anchor="bottom" scale={0.5} pitchAlignment={'viewport'}>
+            <img src={'https://cdn-icons-png.flaticon.com/512/1166/1166009.png'} alt="marker" width={30} />
+        </Marker>
+
         {
             lat && lng && (
                 <Marker longitude={lng} latitude={lat} anchor="bottom" scale={0.5} pitchAlignment={'viewport'}>
@@ -68,6 +95,7 @@ const MapV = () => {
                 </Marker>
             )
         }
+
         {
             trucksLocations.map(truck => (
                 <Marker longitude={truck.lng} latitude={truck.lat} anchor="bottom" scale={0.5} pitchAlignment={'viewport'}>
