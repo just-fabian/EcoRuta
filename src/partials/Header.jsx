@@ -3,6 +3,7 @@ import { AppBar, Box, ButtonGroup, IconButton, Toolbar, Typography } from '@mui/
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useWindowSize } from '../hooks/useWindowSize';
+import '../styles/header.css';
 
 const Header = () => {
   const [top, setTop] = useState(true);
@@ -26,21 +27,21 @@ const Header = () => {
   }, [top]);
 
   return (
-    <AppBar position="static">
-      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-        <Typography variant="h6">
-          Ecoruta
+    <AppBar position="fixed">
+      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', backgroundColor: '#3D656A'}}>
+        <Typography variant="h6" sx={{ color: '#FFF7F1'}}>
+          EcoRuta
         </Typography>
 
         {
           size.width > 720 && (
-            <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <ButtonGroup variant="contained" color="primary">
-                <Button>Mapa</Button>
-                <Button>Servicios</Button>
-                <Button>Carros Basureros</Button>
-                <Button onClick={login}>LogIn</Button>
-              </ButtonGroup>
+            <Box sx={{ display: 'flex', alignItems: 'center'}} >
+              <div className='header-buttons' >
+                <Button style={{color: "#FFF7F1"}}>Mapa</Button>
+                <Button style={{color: "#FFF7F1"}}>Servicios</Button>
+                <Button style={{color: "#FFF7F1"}}>Carros Basureros</Button>
+                <Button style={{color: "#FFF7F1"}} onClick={login}>LogIn</Button>
+              </div>
             </Box>
           )
         }

@@ -21,12 +21,12 @@ const BottomNav = () => {
     <>
       {
         size.width <= 720 && (
-          <AppBar position="static">
+          <AppBar className='bottom-nav' position="flex">
             <BottomNavigation>
-              <BottomNavigationAction label="Mapa" icon={<BiMap />} />
-              <BottomNavigationAction label="Servicios" icon={<MdOutlineDashboard />} />
-              <BottomNavigationAction label="Carros Basureros" icon={<FiTruck />} />
-              <BottomNavigationAction onClick={login} label="LogIn" icon={<MdOutlineLogin />} />
+              <BottomNavigationAction label="Mapa" icon={<BiMap />} style={{color: "#3D656A"}} />
+              <BottomNavigationAction label="Servicios" icon={<MdOutlineDashboard />} style={{color: "#3D656A"}} />
+              <BottomNavigationAction label="Carros Basureros" icon={<FiTruck />} style={{color: "#3D656A"}} />
+              <BottomNavigationAction onClick={login} label="LogIn" icon={<MdOutlineLogin />} style={{color: "#3D656A"}} />
             </BottomNavigation>
           </AppBar>
         )
