@@ -7,7 +7,7 @@ import { useWindowSize } from '../hooks/useWindowSize';
 const Header = () => {
   const [top, setTop] = useState(true);
   const navigate = useNavigate();
-  const size = useWindowSize();
+  const size = useWindowSize()
 
   const signup = () => {
     navigate('/register');
