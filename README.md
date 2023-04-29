@@ -1,6 +1,8 @@
 # EcoRuta
-By salchipapus team
 
+## Team
+Salchipapus
 
-### Status
-Working on branch develop.
+## Usage
+  npm install
+  npm run dev
