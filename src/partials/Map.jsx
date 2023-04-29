@@ -46,7 +46,7 @@ export default function Map() {
   });
 
   return (
-    <div style={{marginTop: 20}}>
+    <div style={{marginTop: 6}}>
       <div ref={mapContainer} className="map-container" style={{ height:'100vh', width: '100wh' }} />
     </div>
   );
