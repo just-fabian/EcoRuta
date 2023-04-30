@@ -42,7 +42,7 @@ const TruckRoute = ({ geojson }) => {
         } else {
             setCenter({ lat: -17.394211, lng: -66.156376})
         }
-  })
+  }, [])
 
   return (
     <Map
