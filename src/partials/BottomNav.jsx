@@ -27,10 +27,10 @@ const BottomNav = () => {
       {
         size.width <= 720 && (
           <AppBar className='bottom-nav' position="flex">
-            <BottomNavigation>
-              <BottomNavigationAction onClick={home} label="Mapa carros basureros" icon={<BsMap />} style={{color: "#3D656A"}} />
-              <BottomNavigationAction onClick={dumspsters} label="Contenedores" icon={<FaDumpster />} style={{color: "#3D656A"}} />
-              <BottomNavigationAction onClick={trucks} label="Carros Basureros" icon={<FiTruck />} style={{color: "#3D656A"}} />
+            <BottomNavigation style={{ backgroundColor: '#3D656A' }}>
+              <BottomNavigationAction onClick={home} label="Mapa carros basureros" icon={<BsMap />} style={{backgroundColor: "#3D656A", color: "#FFF7F1"}} />
+              <BottomNavigationAction onClick={dumspsters} label="Contenedores" icon={<FaDumpster />} style={{backgroundColor: "#3D656A", color: "#FFF7F1"}} />
+              <BottomNavigationAction onClick={trucks} label="Carros Basureros" icon={<FiTruck />} style={{backgroundColor: "#3D656A", color: "#FFF7F1"}} />
             </BottomNavigation>
           </AppBar>
         )
