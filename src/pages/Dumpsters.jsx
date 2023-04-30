@@ -1,11 +1,12 @@
 import BottomNav from '../partials/BottomNav';
 import Header from '../partials/Header';
+import Map from '../partials/DumpsterMap';
 
-export default function Services() {
+export default function Home() {
   return (
     <div className='w-full'>
       <Header />
-      <div>SERVICES</div>
+      <Map/>
       <BottomNav/>
     </div>
   );

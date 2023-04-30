@@ -10,16 +10,8 @@ const Header = () => {
   const navigate = useNavigate();
   const size = useWindowSize()
 
-  const signup = () => {
-    navigate('/register');
-  };
-
-  const profile = () => {
-    navigate('/profile');
-  };
-
-  const services = () => {
-    navigate('/services');
+  const dumspsters = () => {
+    navigate('/dumpsters');
   };
 
   const home = () => {
@@ -50,10 +42,9 @@ const Header = () => {
           size.width > 720 && (
             <Box sx={{ display: 'flex', alignItems: 'center'}} >
               <div className='header-buttons' >
-                <Button style={{color: "#FFF7F1"}} onClick={home}>Mapa</Button>
-                <Button style={{color: "#FFF7F1"}} onClick={services}>Servicios</Button>
+                <Button style={{color: "#FFF7F1"}} onClick={home}>Mapa carros basureros</Button>
+                <Button style={{color: "#FFF7F1"}} onClick={dumspsters}>Contenedores</Button>
                 <Button style={{color: "#FFF7F1"}} onClick={trucks}>Carros Basureros</Button>
-                <Button style={{color: "#FFF7F1"}} onClick={profile}>Profile</Button>
               </div>
             </Box>
           )
