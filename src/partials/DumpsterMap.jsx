@@ -7,7 +7,9 @@ const Dumpsters = () => {
   const [lat, setLat] = useState(null);
   const [center, setCenter] = useState({ lat: -17.394211, lng: -66.156376});
   const [dumpstersLocations, setDumpstersLocations] = useState([
-    {lng: -66.175949, lat: -17.369272}, {lng: -66.160909, lat: -17.381478}, {lng: -66.166337, lat: -17.388775}
+    {lng: -66.175949, lat: -17.369272}, {lng: -66.160909, lat: -17.381478}, {lng: -66.166337, lat: -17.388775}, {lng: -66.158167, lat: -17.395818},
+    {lng: -66.159584, lat: -17.388388}, {lng: -66.153488, lat: -17.391505}, {lng: -66.151913, lat: -17.393445}, {lng: -66.137209, lat: -17.374094},
+    {lng: -66.154501, lat: -17.387321}, {lng: -66.175422, lat: -17.396351}, {lng: -66.165383, lat: -17.378801}, {lng: -66.145541, lat: -17.390043}
   ]);
 
   const handlePermission = () => {
