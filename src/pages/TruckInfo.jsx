@@ -58,7 +58,7 @@ export default function TruckInfo() {
       };
 
   return (
-    <div className='w-full'>
+    <div>
       <Header />
       <Map geojson={geojson} />
       <BottomNav/>

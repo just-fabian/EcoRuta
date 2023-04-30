@@ -19,8 +19,7 @@ export default function App() {
             <Route path='/truck:truckId' element={<Truck />} />
           <Route path='/profile' element={<Profile />} />
         </Route>
-        <Route element={<RequiereAuth />}>
-        </Route>
+        <Route element={<RequiereAuth />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </div>
