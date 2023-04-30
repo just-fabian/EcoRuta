@@ -25,7 +25,7 @@ nodejs
     sudo apt install nodejs  
     node --version  
    
-**Window**
+**Windows**  
 https://phoenixnap.com/kb/install-node-js-npm-on-windows
 
 ## Usage
@@ -49,3 +49,6 @@ https://phoenixnap.com/kb/install-node-js-npm-on-windows
     
     
 To see current location feature in the web app you need to grant permissions to access location and have GPS activated.
+
+
+https://www.canva.com/design/DAFhXOp5itg/CJjov4YgRfd--5aSiaFKXw/watch?utm_content=DAFhXOp5itg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
