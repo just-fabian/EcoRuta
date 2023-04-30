@@ -26,9 +26,9 @@ export default function Trucks() {
   return (
     <>
       <Header/>
-      {data.map((card, index) => (
+      {data.map(card => (
         <div style={{ paddingTop: 80 }}>
-        <Card key={index} style={{ marginBottom: '10px' }} onClick={() => navigate('/truck:'+card.code)}>
+        <Card key={card.code} style={{ marginBottom: '10px' }} onClick={() => navigate('/truck:'+card.code)}>
           <CardContent style={{ display: 'flex', flexDirection: 'row'}}>
             <GiTruck size={30} style={{ marginRight: '10px' }} />
             <Typography variant="h5" component="h2">

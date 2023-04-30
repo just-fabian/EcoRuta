@@ -6,6 +6,8 @@ import Map from '../partials/TruckRoute';
 export default function TruckInfo() {
     const {truckId} = useParams();
 
+    console.log(truckId)
+
     const routes = {
         A: [  
             [-66.166988, -17.382428],
@@ -58,7 +60,7 @@ export default function TruckInfo() {
       };
 
   return (
-    <div>
+    <div className='w-full'>
       <Header />
       <Map geojson={geojson} />
       <BottomNav/>
