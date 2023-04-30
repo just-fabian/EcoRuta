@@ -5,14 +5,11 @@ import Map from '../partials/MapView';
 
 export default function Home() {
 
-  const [isLogged, setIsLogged] = useState(true);
 
   return (
     <div className='w-full'>
       <Header />
-      {
-        isLogged ? <Map/> : <div>LANDING PAGE</div>
-      }
+      <Map/>
       <BottomNav/>
     </div>
   );

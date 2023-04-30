@@ -4,7 +4,7 @@ import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
 import RequiereLogin from './verifiers/RequiereLogin';
 import RequiereAuth from './verifiers/RequireAuth';
-import Services from './pages/Services';
+import Dumpsters from './pages/Dumpsters';
 import Trucks from './pages/Truck';
 
 export default function App() {
@@ -13,7 +13,7 @@ export default function App() {
       <Routes>
         <Route element={<RequiereLogin />}>
           <Route path='/' element={<Home />} />
-          <Route path='/services' element={<Services />} />
+          <Route path='/dumpsters' element={<Dumpsters />} />
           <Route path='/trucks' element={<Trucks />} />
           <Route path='/profile' element={<Profile />} />
         </Route>
