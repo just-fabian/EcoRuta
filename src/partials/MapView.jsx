@@ -74,9 +74,9 @@ const MapV = () => {
                     zoom: 13,
                 }
             }
-            mapStyle="mapbox://styles/mapbox/streets-v9"
+            mapStyle="mapbox://styles/mapbox/streets-v12"
             style={{ height: '100vh'}}
-            mapboxAccessToken='pk.eyJ1IjoiZmFiaWFuMTMwNCIsImEiOiJjbGgxY2V0MDIwZ2c1M21td3p3ZnhscjBnIn0.OLeCRjH-HMImvve7licNNw'
+            mapboxAccessToken='pk.eyJ1IjoiZmFiaWFuMTMwNCIsImEiOiJjbGgxY2hpOXUwZXM3M251ajN0azVzYXVoIn0.uaAvRGjN-kWgHXMrBvxYnA'
         >
         <NavigationControl showCompass={false} position='bottom-right' style={{ marginBottom: 24 }} />
         <Marker longitude={lng} latitude={lat} anchor="bottom" scale={0.5} pitchAlignment={'viewport'}>

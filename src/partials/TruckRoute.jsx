@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import Map, { GeolocateControl, Marker, NavigationControl } from 'react-map-gl';
+import Map, { GeolocateControl, Layer, Marker, NavigationControl, Source } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css'
+import { useParams } from 'react-router';
 
-const Dumpsters = () => {
+const TruckRoute = ({ geojson }) => {
   const [lng, setLng] = useState(null);
   const [lat, setLat] = useState(null);
   const [center, setCenter] = useState({ lat: -17.394211, lng: -66.156376});
-  const [dumpstersLocations, setDumpstersLocations] = useState([
-    {lng: -66.175949, lat: -17.369272}, {lng: -66.160909, lat: -17.381478}, {lng: -66.166337, lat: -17.388775}
-  ]);
 
   const handlePermission = () => {
     navigator.permissions.query({ name: "geolocation" }).then((result) => {
@@ -73,15 +71,17 @@ const Dumpsters = () => {
             )
         }
 
-        {
-            dumpstersLocations.map(dumpster => (
-                <Marker key={dumpster.lat} longitude={dumpster.lng} latitude={dumpster.lat} anchor="bottom" scale={0.5} pitchAlignment={'viewport'}>
-                    <img src={'https://cdn-icons-png.flaticon.com/512/1833/1833783.png'} alt="marker" width={30} />
-                </Marker>
-            ))
-        }
+        <Source id="route" type="geojson" data={geojson}>
+        <Layer
+            id="route"
+            type="line"
+            source="route"
+            layout={{ 'line-join': 'round', 'line-cap': 'round' }}
+            paint={{ 'line-color': '#888', 'line-width': 8 }}
+        />
+        </Source>
     </Map>
   );
 };
 
-export default Dumpsters;
+export default TruckRoute;
